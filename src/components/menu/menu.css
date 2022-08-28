@@ -1,0 +1,12 @@
+.menu-container{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 2px solid white;
+  max-width: 15vw;
+  height: 90vh;
+  gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+
