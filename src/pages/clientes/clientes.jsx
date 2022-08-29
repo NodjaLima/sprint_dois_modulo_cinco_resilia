@@ -7,8 +7,6 @@ import './clientes.css'
 const Clientes = () => {
   const { clientes } = useContext(ClienteContext)
 
-  console.log(clientes)
-  
     return ( 
     <div className="clientes-container">
       <h1>Lista de Clientes Cadastrados</h1>

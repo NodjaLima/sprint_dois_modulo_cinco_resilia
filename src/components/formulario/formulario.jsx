@@ -66,7 +66,7 @@ const Formulario = () => {
     <div className="form-container">
     
       {(final === true) && (
-        <div className="final">
+        <div className="finalize">
         <h1>Cliente cadastrado com sucesso!</h1>
         <Link to='/cadastro' ><button onClick={(e)=> {
           setFinal(false)
@@ -75,21 +75,22 @@ const Formulario = () => {
         <Link to='/clientes' ><button>Verificar lista de clientes</button></Link>
         </div>
       )}
+
       {(final === false) && (
       <div className="form-extra"><p className="step-guide">
         {passo + 1} de {passosForm.length}
-      </p>
-      <form className="steps-form" >
-      {passosForm[passo].id === 'parte1' && (
-      <div className="fields">
-        <h1>{passosForm[passo].title}</h1>
-        <div className="field">
-          <input
-            type="text"
-            placeholder="Nome"
-            name="nome"
-            onChange={(e) => {setNome(e.target.value)}}
-          />
+        </p>
+        <form className="steps-form" >
+        {passosForm[passo].id === 'parte1' && (
+        <div className="fields">
+          <h1>{passosForm[passo].title}</h1>
+          <div className="field">
+            <input
+              type="text"
+              placeholder="Nome"
+              name="nome"
+              onChange={(e) => {setNome(e.target.value)}}
+            />
         </div>
         <div className="field">
           <input
@@ -193,12 +194,13 @@ const Formulario = () => {
       </button>
 
     )}
-    </div>
 
-    </form></div>
+    </div>
+    </form>
+    </div>
     )}
 
-    </div>)
+  </div>)
 }
  
 export default Formulario;
