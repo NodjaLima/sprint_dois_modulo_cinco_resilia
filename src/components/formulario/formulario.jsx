@@ -68,6 +68,10 @@ const Formulario = () => {
       {(final === true) && (
         <div className="final">
         <h1>Cliente cadastrado com sucesso!</h1>
+        <Link to='/cadastro' ><button onClick={(e)=> {
+          setFinal(false)
+          setPasso(0)}
+          }>Cadastrar novo cliente</button></Link>
         <Link to='/clientes' ><button>Verificar lista de clientes</button></Link>
         </div>
       )}
