@@ -57,9 +57,6 @@ const Formulario = () => {
     }
 
     setClientes([...clientes, novoCliente])
-
-    alert('Cliente cadastrado com sucesso!')
-
     setFinal(true)
          
   }
@@ -69,13 +66,13 @@ const Formulario = () => {
     <div className="form-container">
     
       {(final === true) && (
-        <div>
+        <div className="final">
         <h1>Cliente cadastrado com sucesso!</h1>
         <Link to='/clientes' ><button>Verificar lista de clientes</button></Link>
         </div>
       )}
       {(final === false) && (
-      <div ><p className="step-guide">
+      <div className="form-extra"><p className="step-guide">
         {passo + 1} de {passosForm.length}
       </p>
       <form className="steps-form" >
@@ -170,7 +167,7 @@ const Formulario = () => {
     <div className="botoes">
     
       {passo > 0 && (
-      <button type="submit" onClick={handlePassoAnterior}>
+      <button type="button" onClick={handlePassoAnterior}>
         Voltar
       </button>
     )}
