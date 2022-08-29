@@ -15,16 +15,8 @@ export const ClienteProvider = ({ children }) => {
     renda_mensal: 'teste renda_mensal'
   }])
 
-  const handleSubmit = (clientes) => {
-
-    setClientes(clientes)
-
-    console.log('dados provider', { clientes })
-
-  }
-
   return(
-    <ClienteContext.Provider value={{ clientes, submit: handleSubmit }}>
+    <ClienteContext.Provider value={{ clientes, setClientes }}>
       {children}
     </ClienteContext.Provider>
   )

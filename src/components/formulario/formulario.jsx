@@ -33,7 +33,7 @@ const Formulario = () => {
 
   const [final, setFinal] = useState(false)
 
-  const { clientes, submit } = useContext(ClienteContext)
+  const { clientes, setClientes } = useContext(ClienteContext)
 
   function handleProximoPasso() {
   setPasso((prevState) => prevState + 1);
@@ -56,7 +56,7 @@ const Formulario = () => {
       renda_mensal: renda_mensal
     }
 
-    submit([...clientes, novoCliente])
+    setClientes([...clientes, novoCliente])
 
     alert('Cliente cadastrado com sucesso!')
 
@@ -69,7 +69,10 @@ const Formulario = () => {
     <div className="form-container">
     
       {(final === true) && (
+        <div>
+        <h1>Cliente cadastrado com sucesso!</h1>
         <Link to='/clientes' ><button>Verificar lista de clientes</button></Link>
+        </div>
       )}
       {(final === false) && (
       <div ><p className="step-guide">
